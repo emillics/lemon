@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.emillics.lemon.module.spider.widget.DYWebView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.VBox?>
+<SplitPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <SplitPane orientation="VERTICAL" minWidth="100">
+            <items>
+                <VBox fx:id="tabSpider">
+                    <ToolBar prefHeight="40" minHeight="40" maxHeight="40">
+                        <items>
+                            <Button fx:id="btnSpider" maxHeight="Infinity" prefWidth="35">
+                                <tooltip>
+                                    <Tooltip text="开始"/>
+                                </tooltip>
+                                <graphic>
+                                    <ImageView fitWidth="12" fitHeight="12">
+                                        <Image url="/images/start.png"/>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Separator orientation="VERTICAL"/>
+                        </items>
+                    </ToolBar>
+                    <TableView fx:id="tbvData" maxWidth="Infinity" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn editable="false" prefWidth="70.0" sortable="false"
+                                         style="-fx-alignment: CENTER;"
+                                         text="序号"/>
+                            <TableColumn prefWidth="80" text="账号id">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="userId"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="100.0" text="账号名称">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="userName"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="100.0" text="账号头像">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="userAvatar"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80.0" text="视频id">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="100.0" text="视频标题">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="title"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="100.0" text="视频类型">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="type"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="100.0" text="发布时间">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="publishTime"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80.0" text="点赞量">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="likeCount"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80.0" text="评论量">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="commentCount"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80.0" text="收藏量">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="favouriteCount"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80.0" text="转发量">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="shareCount"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="120.0" text="采集时间">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="createTime"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="80" text="时长">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="duration"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="120.0" text="本地文件">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="path"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="70.0" text="格式">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="format"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="70.0" text="大小">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="size"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="120.0" text="话题标签">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="tags"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </VBox>
+                <TabPane minHeight="200" maxWidth="Infinity" side="BOTTOM">
+                    <tabs>
+                        <Tab closable="false">
+                            <graphic>
+                                <ImageView preserveRatio="true" fitWidth="25">
+                                    <Image url="/images/log.png"/>
+                                </ImageView>
+                            </graphic>
+                            <TextArea fx:id="webLog" maxWidth="Infinity" maxHeight="Infinity"/>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </items>
+        </SplitPane>
+        <TabPane minWidth="100" side="RIGHT">
+            <tabs>
+                <Tab closable="false">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30" preserveRatio="true">
+                            <Image url="/images/web.png"/>
+                        </ImageView>
+                    </graphic>
+                    <DYWebView fx:id="dyWebView" url="https://www.douyin.com/?recommend=1"/>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </items>
+</SplitPane>

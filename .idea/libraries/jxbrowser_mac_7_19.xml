@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jxbrowser-mac-7.19">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jxbrowser-mac-7.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

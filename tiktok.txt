@@ -1,0 +1,44 @@
+
+0.抓取页面
+https://www.douyin.com/?recommend=1
+
+1.关闭注册弹框
+document.querySelector(".douyin-login__close.dy-account-close").click();
+
+2.账号名称
+targetElement.querySelector(".arnSiSbK.ypGAC_xH.ONzzdL2F").innerText
+
+3.头像
+targetElement.querySelector(".fiWP27dC").src;
+
+4.点赞量
+targetElement.querySelector(".KV_gO8oI.uwkzJlBF.myn2Itp_").innerText
+
+5.评论量
+targetElement.querySelector(".X_wB9MpJ.RfKJW3Qx").innerText
+
+6.收藏量
+targetElement.querySelector(".OjAuUiYV.GHGs1foJ").innerText
+
+7.转发量
+targetElement.querySelector(".hzIYk71v").innerText
+
+8.标题
+targetElement.querySelector(".arnSiSbK.hT34TYMB.ONzzdL2F").innerText
+
+9.发布时间
+targetElement.querySelector(".time").innerText;
+
+10.下一条
+document.querySelector(".xgplayer-playswitch-next").click();
+
+11.判断是否是直播间
+targetElement.querySelector(".emEGxhuh").innerText.indexOf("进入直播间") > -1
+
+12.账号id
+targetElement.querySelector(".uz1VJwFY.Xp5KTxmx").href.substr( document.querySelector(".uz1VJwFY.Xp5KTxmx").href.lastIndexOf('/')+1)；
+
+13.视频id
+if(targetElement.getChildren(0).attribute("data-e2e")=="feed-active-video"){
+   videoId = targetElement.getChildren(0).attribute("data-e2e-vid");
+}

@@ -1,0 +1,28 @@
+/*.table-view .column-header .label{
+    -fx-alignment: CENTER_RIGHT;
+}*/
+.table-view .table-column#sign-rule-column {
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+.table-view .column-header#sign-rule-column .label {
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+/*主页左边标签页*/
+#tabModule .tab {
+    -fx-padding: 40, 0, 0, 0;
+    -fx-min-height: 60;
+    -fx-max-height: 60;
+    -fx-pref-height: 60;
+    -fx-min-width: 100;
+    -fx-max-width: 100;
+    -fx-pref-width: 100;
+}
+
+.button:hover {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
